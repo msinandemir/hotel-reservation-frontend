@@ -5,9 +5,22 @@
   }
   
   table {
-    border-collapse: collapse;
+    border-collapse:collapse;
     border: 1px solid #ccc; /* Border around the table */
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   }
+  table thead {
+    background-color: #009879; /* Header background color */
+    color: #ffffff; /* Header text color */
+    text-align: left;
+    font-weight: bold;
+  }
+  
   
   td {
     padding: 33px;
@@ -16,10 +29,10 @@
   }
   
   label {
-    display: block;
+    display:flex;
     margin-bottom: 8px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1px;
   }
   
   .large-input {
@@ -31,15 +44,16 @@
   }
   
   .large-button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     background-color: #007bff;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 1px;
   }
   
   .large-button:hover {
