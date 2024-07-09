@@ -1,0 +1,29 @@
+<form [formGroup]="aramaForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <table>
+        <tr>
+          <td>
+            <label for="gidilecekYer">Gidilecek Yer</label>
+            <input type="text" class="form-control large-input" id="gidilecekYer" formControlName="gidilecekYer" placeholder="Gidilecek yer">
+          </td>
+          <td>
+            <label for="girisTarihi">Giriş Tarihi</label>
+            <input type="date" class="form-control large-input" id="girisTarihi" formControlName="girisTarihi">
+          </td>
+          <td>
+            <label for="cikisTarihi">Çıkış Tarihi</label>
+            <input type="date" class="form-control large-input" id="cikisTarihi" formControlName="cikisTarihi">
+          </td>
+          <td>
+            <label for="kisiSayisi">Kişi Sayısı</label>
+            <input type="number" class="form-control large-input" id="kisiSayisi" formControlName="kisiSayisi">
+          </td>
+          <td>
+            <label>&nbsp;</label> <!-- Empty label for alignment -->
+            <button type="submit" class="btn btn-primary large-button">Ara</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+  
