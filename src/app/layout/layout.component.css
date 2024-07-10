@@ -1,0 +1,10 @@
+.content {
+    padding-top: 60px; /* Navbar yüksekliğine göre ayarlayın */
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
