@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
-import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/anasayfa', pathMatch: 'full' },
@@ -15,6 +14,5 @@ export const routes: Routes = [
       // Diğer layout içindeki rotalar buraya eklenebilir
     ]
   },
-  { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '/anasayfa' } // Bilinmeyen rotalar için anasayfaya yönlendirme
 ];
