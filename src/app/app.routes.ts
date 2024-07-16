@@ -1,22 +1,20 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/anasayfa', pathMatch: 'full' },
-    {
-      path: '', 
-      component: LayoutComponent,
-      children: [
-        { path: 'anasayfa', component: AppComponent },
-        { path: 'seyahat', component: AppComponent },
-        { path: 'seçenekler', component: AppComponent },
-        // Diğer layout içindeki rotalar
-      ]
-    },
-    { path: '**', redirectTo: '/anasayfa' }
-  ];
-
-
-
-  export default routes;
+  { path: '', redirectTo: '/anasayfa', pathMatch: 'full' },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: 'anasayfa', component: AppComponent },
+      { path: 'seyahat', component: AppComponent },
+      { path: 'secenekler', component: AppComponent }, // 'seçenekler' yerine 'secenekler' olarak güncelledim
+      // Diğer layout içindeki rotalar buraya eklenebilir
+    ]
+  },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '/anasayfa' } // Bilinmeyen rotalar için anasayfaya yönlendirme
+];
