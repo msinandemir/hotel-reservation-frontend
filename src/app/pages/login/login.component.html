@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-box">
+      <h2>Giriş Yap</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email"></label>
+          <input type="email" id="email" formControlName="email" class="form-control" placeholder="E-mail adresinizi girin">
+          <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="text-danger">
+            Geçerli bir e-mail adresi girin.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input type="password" id="password" formControlName="password" class="form-control" placeholder="Şifrenizi girin">
+          <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="text-danger">
+            Şifre gereklidir.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+      </form>
+    </div>
+  </div>
+  

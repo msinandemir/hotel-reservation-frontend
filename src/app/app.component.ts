@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./navbar/navbar.component";
-import { HotelSearchComponent } from "./hotel-search/hotel-search.component";
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { TextInfoComponent } from "./text-info/text-info.component";
-import { CardComponent } from "./card/card.component";
-import { FooterComponent } from "./footer/footer.component";
+import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { HotelSearchComponent } from "./components/hotel-search/hotel-search.component";
+import { TextInfoComponent } from "./components/text-info/text-info.component";
+import { CardComponent } from "./components/card/card.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { LoginComponent } from "./pages/login/login.component";
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { FooterComponent } from "./footer/footer.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, NavbarComponent, HotelSearchComponent, TextInfoComponent, CardComponent, FooterComponent]
+    imports: [RouterModule, RouterLinkActive, RouterLink, RouterOutlet ,CommonModule, NavbarComponent, HotelSearchComponent, TextInfoComponent, CardComponent, FooterComponent, LoginComponent]
 })
 export class AppComponent {
   title = 'hotel-reservation';

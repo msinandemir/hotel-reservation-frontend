@@ -1,0 +1,55 @@
+<div class="signup-container">
+    <div class="signup-box">
+      <h2>Kayıt Ol</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="Adınızı girin">
+          <div *ngIf="signupForm.get('firstName')?.invalid && (signupForm.get('firstName')?.dirty || signupForm.get('firstName')?.touched)" class="text-danger">
+            Ad gereklidir.
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Soyadınızı girin">
+          <div *ngIf="signupForm.get('lastName')?.invalid && (signupForm.get('lastName')?.dirty || signupForm.get('lastName')?.touched)" class="text-danger">
+            Soyad gereklidir.
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" formControlName="email" class="form-control" placeholder="E-posta adresinizi girin">
+          <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)" class="text-danger">
+            Geçerli bir e-posta adresi girin.
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" formControlName="password" class="form-control" placeholder="Şifrenizi girin">
+          <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)" class="text-danger">
+            Şifre gereklidir.
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Şifrenizi tekrar girin">
+          <div *ngIf="signupForm.get('confirmPassword')?.invalid && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)" class="text-danger">
+            Şifreler eşleşmiyor.
+          </div>
+        </div>
+        <div class="form-group">
+          <input min="18" max="150" type="number" id="age" formControlName="age" class="form-control" placeholder="Yaşınızı girin">
+          <div *ngIf="signupForm.get('age')?.invalid && (signupForm.get('age')?.dirty || signupForm.get('age')?.touched)" class="text-danger">
+            Yaş gereklidir.
+          </div>
+        </div>
+        <div class="form-group">
+          <select id="gender" formControlName="gender" class="form-control">
+            <option value="">Cinsiyet</option>
+            <option value="male">Erkek</option>
+            <option value="female">Kadın</option>
+          </select>
+          <div *ngIf="signupForm.get('gender')?.invalid && (signupForm.get('gender')?.dirty || signupForm.get('gender')?.touched)" class="text-danger">
+            Cinsiyet gereklidir.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+      </form>
+    </div>
+  </div>
+  
