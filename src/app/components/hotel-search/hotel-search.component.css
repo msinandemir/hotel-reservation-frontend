@@ -3,7 +3,7 @@
     justify-content: left;
     margin-top: 40px;
   }
-  
+
   table {
     border-collapse:collapse;
     border: 1px solid #ccc; /* Border around the table */
@@ -20,21 +20,21 @@
     text-align: left;
     font-weight: bold;
   }
-  
-  
+
+
   td {
     padding: 33px;
     vertical-align: top;
     border: 1px solid #ccc; /* Border around table cells */
   }
-  
+
   label {
     display:flex;
     margin-bottom: 8px;
     font-weight: bold;
     font-size: 1px;
   }
-  
+
   .large-input {
     width: 200px; /* Adjust width as needed */
     padding: 10px;
@@ -42,7 +42,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
+
   .large-button {
     padding: 10px 25px;
     font-size: 16px;
@@ -55,8 +55,7 @@
     box-sizing: border-box;
     margin-top: 1px;
   }
-  
+
   .large-button:hover {
     background-color: #0056b3;
   }
-  
